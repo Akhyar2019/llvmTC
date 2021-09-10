@@ -47,8 +47,8 @@ builder_commit="$(git rev-parse HEAD)"
 tg_post_msg "<b>$LLVM_NAME: Toolchain Compilation Started</b>%0A<b>Date : </b><code>$rel_friendly_date</code>%0A<b>Toolchain Script Commit : </b><code>$builder_commit</code>%0A"
 
 # Build LLVM
-msg "$LLVM_NAME: Building LLVM..."
-tg_post_msg "<b>$LLVM_NAME: Building LLVM. . .</b>"
+msg "$LLVM_NAME: Building LLVM Bro..."
+tg_post_msg "<b>$LLVM_NAME: Building LLVM Bro. . .</b>"
 ./build-llvm.py \
 	--clang-vendor "$LLVM_NAME" \
 	--projects "clang;lld;polly" \
@@ -65,8 +65,8 @@ tg_post_msg "<b>$LLVM_NAME: Building LLVM. . .</b>"
 }
 
 # Build binutils
-msg "$LLVM_NAME: Building binutils..."
-tg_post_msg "<b>$LLVM_NAME: Building Binutils. . .</b>"
+msg "$LLVM_NAME: Sekarang Building binutils Bro..."
+tg_post_msg "<b>$LLVM_NAME: Sekarang Building binutils Bro. . .</b>"
 ./build-binutils.py --targets arm aarch64
 
 # Remove unused products
